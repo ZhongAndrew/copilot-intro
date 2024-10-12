@@ -1,97 +1,110 @@
+/* 設置全局樣式 */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    margin-top: 130px;
+    font-family: Arial, sans-serif; /* 設置全局字體 */
+    margin: 0; /* 移除默認外邊距 */
+    padding: 0; /* 移除默認內邊距 */
+    background-color: #f4f4f4; /* 設置背景顏色 */
+    margin-top: 130px; /* 設置頂部外邊距以容納固定的標題 */
 }
 
+/* 標題樣式 */
 header {
-    background-color: #0078d7;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+    background-color: #0078d7; /* 設置背景顏色 */
+    color: #fff; /* 設置字體顏色 */
+    padding: 20px; /* 設置內邊距 */
+    text-align: center; /* 文本居中對齊 */
+    position: fixed; /* 固定位置 */
+    top: 0; /* 固定在頂部 */
+    width: 100%; /* 寬度100% */
+    z-index: 1000; /* 設置層疊順序 */
 }
 
+/* 主要內容區域 */
 main {
-    padding: 20px;
+    padding: 20px; /* 設置內邊距 */
 }
 
+/* 標題樣式 */
 h1, h2 {
-    color: #333;
+    color: #333; /* 設置字體顏色 */
 }
 
+/* 分隔線樣式 */
 hr {
-    border: 1px solid #ccc;
-    margin: 20px 0;
+    border: 1px solid #ccc; /* 設置邊框顏色和厚度 */
+    margin: 20px 0; /* 設置上下外邊距 */
 }
 
+/* 圖片樣式 */
 img {
-    display: block;
-    margin: 0 auto 20px auto;
-    max-width: 100%;
-    height: auto;
-    margin-right: 1100px;
+    display: block; /* 設置為塊級元素 */
+    margin: 0 auto 20px auto; /* 設置上下左右外邊距 */
+    max-width: 100%; /* 設置最大寬度 */
+    height: auto; /* 自動調整高度 */
+    margin-right: 1100px; /* 設置右側外邊距 */
 }
 
+/* 嵌入影片樣式 */
 iframe {
-    display: block;
-    margin: 0 auto;
-    margin-right: 1100px;
+    display: block; /* 設置為塊級元素 */
+    margin: 0 auto; /* 設置上下外邊距 */
+    margin-right: 1100px; /* 設置右側外邊距 */
 }
 
+/* 列表樣式 */
 ul {
-    list-style-type: none;
-    padding: 0;
+    list-style-type: none; /* 移除列表樣式 */
+    padding: 0; /* 移除內邊距 */
 }
 
+/* 列表項樣式 */
 li {
-    background-color: #e7e7e7;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
+    background-color: #e7e7e7; /* 設置背景顏色 */
+    margin: 5px 0; /* 設置上下外邊距 */
+    padding: 10px; /* 設置內邊距 */
+    border-radius: 5px; /* 設置邊框圓角 */
 }
 
+/* 鏈接樣式 */
 a {
-    color: #0078d7;
-    text-decoration: none;
+    color: #0078d7; /* 設置鏈接顏色 */
+    text-decoration: none; /* 移除下劃線 */
 }
 
+/* 鏈接懸停樣式 */
 a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* 懸停時顯示下劃線 */
 }
 
+/* 頁腳樣式 */
 footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #0078d7;
-    color: #fff;
-    width: 100%;
+    text-align: center; /* 文本居中對齊 */
+    padding: 10px; /* 設置內邊距 */
+    background-color: #0078d7; /* 設置背景顏色 */
+    color: #fff; /* 設置字體顏色 */
+    width: 100%; /* 寬度100% */
 }
 
 /* 響應式設計 */
 @media (max-width: 768px) {
     body {
-        margin-top: 160px;
+        margin-top: 160px; /* 響應式設計中增加頂部外邊距 */
     }
 
     header {
-        padding: 10px;
+        padding: 10px; /* 響應式設計中調整內邊距 */
     }
 
     main {
-        padding: 10px;
+        padding: 10px; /* 響應式設計中調整內邊距 */
     }
 
-    img {
-        margin-right: 1000px;
+    img, iframe {
+        margin-right: 0; /* 響應式設計中移除右側外邊距 */
     }
 
-    iframe{
-        margin-right: 100px;
+    iframe {
+        width: 100%; /* 響應式設計中設置寬度100% */
+        height: auto; /* 響應式設計中自動調整高度 */
     }
 }
