@@ -99,12 +99,11 @@ footer {
         padding: 10px; /* 響應式設計中調整內邊距 */
     }
 
-    img, iframe {
-        margin-right: 0; /* 響應式設計中移除右側外邊距 */
+    img {
+        margin-right: 1000px; /* 設置右側外邊距 */
     }
 
-    iframe {
-        width: 100%; /* 響應式設計中設置寬度100% */
-        height: auto; /* 響應式設計中自動調整高度 */
+    iframe{
+        margin-right: 100px; /* 設置右側外邊距 */
     }
 }
