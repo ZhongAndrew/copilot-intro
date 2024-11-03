@@ -5,41 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Microsoft Copilot</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            // 網頁載入時彈出提示視窗
+            alert('歡迎來到本網站');
+
+            // 隱藏所有列表項目
+            $('ul li').hide();
+
+            // 順序顯示列表項目
+            $('ul li').each(function(index) {
+                $(this).delay(500 * index).fadeIn(500);
+            });
+
+            // 區塊切換
+            $('h2').on('click', function() {
+                $(this).next('.content').slideToggle();
+            });
+
+            // 圖片懸停效果
+            $('img').hover(
+                function() {
+                    $(this).css('filter', 'brightness(70%)');
+                },
+                function() {
+                    $(this).css('filter', 'brightness(100%)');
+                }
+            );
+
+            // 點擊圖片時移動位置
+            $('img').on('click', function() {
+                $(this).animate({
+                    left: '+=100px',
+                    height: 'toggle'
+                }, 500);
+            });
+
+            // 點擊按鈕時回到頁面頂部
+            $('#back-to-top').on('click', function() {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+        });
+    </script>
+    <style>
+        img {
+            position: relative; /* 確保圖片的位置可以移動 */
+        }
+
+        /* 調整按鈕樣式 */
+        #back-to-top {
+            display: inline-block; /* 與段落文字排列在同一行 */
+            margin-left: 30px;
+            padding: 10px 20px;
+            background-color: #ccc; /* 底色設為灰色 */
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        #back-to-top:hover {
+            background-color: #999;
+        }
+
+        footer {
+            text-align: center;
+        }
+
+        footer p, footer button {
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>歡迎來到Microsoft Copilot介紹網站</h1>
     </header>
     <main>
-       <section>
-            <img src="images/Copilot.png" alt="Microsoft Copilot" width="400">
+        <section>
             <h2>什麼是Microsoft Copilot？</h2>
-            <p>Microsoft Copilot是一個由Microsoft創建的智能助手。它旨在通過有意義和引人入勝的對話來幫助用戶，並提供有用的資訊。無論你是尋找答案，還是需要某些任務的幫助，Microsoft Copilot都能勝任。</p>
+            <div class="content">
+                <img src="images/Copilot.png" alt="Microsoft Copilot" width="400">
+                <p>Microsoft Copilot是一個由Microsoft創建的智能助手。它旨在通過有意義和引人入勝的對話來幫助用戶，並提供有用的資訊。無論你是尋找答案，還是需要某些任務的幫助，Microsoft Copilot都能勝任。</p>
+            </div>
         </section>
         <hr>
         <section>
             <h2>Microsoft Copilot 初學者指南影片介紹 :</h2>
-            <iframe width="600" height="315" src="https://www.youtube.com/embed/g5pY1Tb_r4g" frameborder="0" allowfullscreen></iframe>
+            <div class="content">
+                <iframe width="600" height="315" src="https://www.youtube.com/embed/g5pY1Tb_r4g" frameborder="0" allowfullscreen></iframe>
+            </div>
         </section>
         <hr>
         <section>
             <h2>更多資訊</h2>
-            <ul>
-                <li><a href="https://www.microsoft.com/en-us/microsoft-365/copilot" target="_blank">Microsoft Copilot 官方網站</a></li>
-                <li><a href="https://news.microsoft.com/reinventing-productivity/" target="_blank">Introducing Microsoft 365 Copilot — your copilot for work</a></li>
-                <li><a href="https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-overview" target="_blank">Microsoft 365 Copilot overview</a></li>
-            </ul>
+            <div class="content">
+                <ul>
+                    <li><a href="https://www.microsoft.com/en-us/microsoft-365/copilot" target="_blank">Microsoft Copilot 官方網站</a></li>
+                    <li><a href="https://news.microsoft.com/reinventing-productivity/" target="_blank">Introducing Microsoft 365 Copilot — your copilot for work</a></li>
+                    <li><a href="https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-overview" target="_blank">Microsoft 365 Copilot overview</a></li>
+                </ul>
+            </div>
         </section>
         <hr>
         <section>
             <h2>Microsoft Copilot 網站</h2>
-            <ul>
-                <li><a href="https://copilot.microsoft.com/" target="_blank">Microsoft Copilot 網站</a></li>
-            </ul>
+            <div class="content">
+                <ul>
+                    <li><a href="https://copilot.microsoft.com/" target="_blank">Microsoft Copilot 網站</a></li>
+                </ul>
+            </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Microsoft</p>
+        <button id="back-to-top">移動至頂部</button>
     </footer>
 </body>
 </html>
